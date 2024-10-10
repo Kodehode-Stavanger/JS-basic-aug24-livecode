@@ -14,13 +14,13 @@ const randomNumber = Math.ceil(Math.random() * 10)
 
 let guess = 0
 
-while (guess !== 6) {
+/* while (guess !== 6) {
     guess++
     console.log(`Guessing ${guess}..`)
     if (guess === 6) {
         console.log(`The secret number is ${guess}!`)
     }
-}
+} */
 
 
 // Objects
@@ -78,3 +78,22 @@ const fruits = [
     }
   ];
 
+/*   let minimum = Infinity
+  let cheapestFruit;
+for (let i = 0; i < fruits.length; i++) {
+    if (fruits[i].pricePerKg < minimum) {
+        minimum = fruits[i].pricePerKg
+        cheapestFruit = `The cheapest fruit is ${fruits[i].name} with a price of ${minimum} kr. per kg`
+    }
+}
+console.log(minimum) */
+
+for (let fruit of fruits) {
+    fruit.good = true
+}
+console.log(fruits)
+for (let fruit of fruits) {
+    delete fruit.good
+}
+
+console.log(fruits)
