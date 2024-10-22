@@ -126,17 +126,17 @@ for (let fruit of fruits) {
   origin.classList.add("origin")
   //stock
   const stock = document.createElement("p")
-  stock.textContent = fruit.stock
+  stock.textContent = `Stock: ${fruit.stock}`
   stock.classList.add("stock")
   //product id
   const id = document.createElement("p")
-  id.textContent = fruits.productId
+  id.textContent = fruit.productId
   id.classList.add("id")
   //appends
   container.append(image, title, description, origin, stock, id)
   //sale
   if (fruit.sale) {
-    container.style.backgroundColor = "green"
+    container.classList.add("on-sale")
     const saleNotice = document.createElement("h5")
     saleNotice.classList.add("sale-notice")
     saleNotice.textContent = `Product is on sale for only ${fruit.price}`
@@ -145,7 +145,7 @@ for (let fruit of fruits) {
     //price
   const price = document.createElement("p")
   price.classList.add("price")
-  price.textContent = fruit.price
+  price.textContent = `Price: ${fruit.price}`
   container.append(price)
   }
   productContainer.append(container)
